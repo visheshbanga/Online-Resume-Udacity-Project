@@ -165,7 +165,9 @@ if(projects.projects.length > 0){
 // Display Education section in resume
 education.display = function(){
     // Display schools
-    for(var i = 0; i < education.schools.length; i++){
+    var i = 0;
+    var formattedDates = "";
+    for(i = 0; i < education.schools.length; i++){
         $("#education").append(HTMLschoolStart);
 
         var formattedName = HTMLschoolName.replace("%data%",education.schools[i].name);
@@ -173,7 +175,7 @@ education.display = function(){
         formattedName += HTMLschoolDegree.replace("%data%",education.schools[i].degree);
         $(".education-entry:last").append(formattedName);
 
-        var formattedDates = HTMLschoolDates.replace("%data%",education.schools[i].dates);
+        formattedDates = HTMLschoolDates.replace("%data%",education.schools[i].dates);
         $(".education-entry:last").append(formattedDates);
 
         var formattedLocation = HTMLschoolLocation.replace("%data%",education.schools[i].location);
@@ -186,7 +188,7 @@ education.display = function(){
     }
     // Display online courses
     $("#education").append(HTMLonlineClasses);
-    for(var i = 0; i < education.onlineCourses.length; i++){
+    for(i = 0; i < education.onlineCourses.length; i++){
         $("#education").append(HTMLschoolStart);
 
         var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[i].title);
@@ -194,7 +196,7 @@ education.display = function(){
         formattedTitle += HTMLonlineSchool.replace("%data%",education.onlineCourses[i].school);
         $(".education-entry:last").append(formattedTitle);
 
-        var formattedDates = HTMLonlineDates.replace("%data%",education.onlineCourses[i].dates);
+        formattedDates = HTMLonlineDates.replace("%data%",education.onlineCourses[i].dates);
         $(".education-entry:last").append(formattedDates);
 
         var formattedUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[i].url);
