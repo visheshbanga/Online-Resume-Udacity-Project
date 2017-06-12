@@ -1,3 +1,5 @@
+/* CSS Modified: change font size on hover to div elements; */
+
 body,
 div,
 ul,
@@ -22,6 +24,13 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
+}
+
+.education-entry:hover,
+.work-entry:hover,
+.project-entry:hover{
+  font-size: 120%;
+  cursor: pointer;
 }
 
 h1 {
